@@ -43,7 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
             backgroundColor: Colors.green,
           ),
         );
-        Navigator.pop(context); // Go back to LoginScreen
+        Navigator.pop(context);
       }
     } catch (e) {
       if (mounted) {

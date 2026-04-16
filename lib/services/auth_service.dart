@@ -6,7 +6,7 @@ class AuthService {
   final _auth = FirebaseAuth.instance;
 
   User? get currentUser => _auth.currentUser;
-  String get currentUserUID => _auth.currentUser!.uid;
+  String? get currentUserUID => _auth.currentUser?.uid;
   Stream<User?> get authState => _auth.authStateChanges();
 
   Future signUp({

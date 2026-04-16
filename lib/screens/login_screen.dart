@@ -31,7 +31,6 @@ class _LoginScreenState extends State<LoginScreen> {
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
-      // AuthGate will automatically navigate to UserProfileScreen via stream
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(

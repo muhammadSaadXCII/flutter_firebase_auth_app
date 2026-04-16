@@ -1,17 +1,79 @@
-# firebase_auth_app
+# Firebase Auth App
 
-A new Flutter project.
+A Flutter application that demonstrates user authentication and profile management using Firebase Authentication and Firestore.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+This project is a complete Flutter app showcasing modern authentication flows including user registration, login, and profile management. It integrates Firebase Authentication for secure user sign-in and Firestore for storing user data, providing a robust foundation for building user-centric mobile applications.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **User Authentication**: Secure sign-up and login using Firebase Authentication
+- **Email/Password Authentication**: Support for email and password-based authentication
+- **User Profile Management**: View and manage user profiles
+- **Firestore Integration**: Store and retrieve user data from Firestore
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) (version 3.11.4 or later)
+- [Dart SDK](https://dart.dev/get-dart) (included with Flutter)
+- A Firebase project with Authentication and Firestore enabled
+- Android Studio or Xcode for mobile development (optional, for emulators)
+
+## Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/muhammadSaadXCII/flutter_firebase_auth_app.git
+   cd flutter_firebase_auth_app
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   flutter pub get
+   ```
+
+3. **Firebase Setup**:
+   - Create a new Firebase project at [Firebase Console](https://console.firebase.google.com/)
+   - Enable Authentication with Email/Password provider
+   - Enable Firestore Database
+   - Download the configuration files:
+     - For Android: Add `google-services.json` to `android/app/`
+   - Update `lib/firebase_options.dart` with your Firebase configuration
+
+4. **Configure Firebase Options**:
+   - Run `flutterfire configure` or manually update the Firebase options in `lib/firebase_options.dart`
+
+## Usage
+
+1. **Run the app**:
+   ```bash
+   flutter run
+   ```
+
+## Dependencies
+
+- `firebase_core`: Firebase core functionality
+- `firebase_auth`: Firebase Authentication
+- `cloud_firestore`: Firestore database
+- `cupertino_icons`: iOS-style icons
+
+## Project Structure
+
+```
+lib/
+├── main.dart                 # App entry point
+├── auth_gate.dart            # Authentication gate widget
+├── firebase_options.dart     # Firebase configuration
+├── models/
+│   └── user.dart             # User model
+├── screens/
+│   ├── login_screen.dart     # Login screen
+│   ├── signup_screen.dart    # Sign-up screen
+│   └── user_profile_screen.dart # User profile screen
+└── services/
+    ├── auth_service.dart     # Authentication service
+    └── firestore_service.dart # Firestore service
+```

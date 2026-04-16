@@ -17,12 +17,15 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
   void initState() {
     super.initState();
     final uid = AuthService().currentUserUID;
-    _userFuture = FirestoreService().getUserByUID(uuid: uid);
+    if (uid != null) {
+      _userFuture = FirestoreService().getUserByUID(uuid: uid);
+    } else {
+      _userFuture = Future.value(null);
+    }
   }
 
   Future<void> _signOut() async {
     await AuthService().logOut();
-    // AuthGate stream will navigate back to LoginScreen automatically
   }
 
   @override
@@ -30,17 +33,7 @@ class _UserProfileScreenState extends State<UserProfileScreen> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Profile'),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.logout),
-            tooltip: 'Sign out',
-            onPressed: _signOut,
-          ),
-        ],
-      ),
+      appBar: AppBar(title: const Text('My Profile'), centerTitle: true),
       body: FutureBuilder<UserModel?>(
         future: _userFuture,
         builder: (context, snapshot) {
