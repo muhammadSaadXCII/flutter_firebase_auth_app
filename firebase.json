@@ -1,0 +1,22 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "authflow-9876b",
+                    "appId": "1:690187611690:android:9d894fb33825621f4e9d53",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "authflow-9876b",
+                    "configurations": {
+                        "android": "1:690187611690:android:9d894fb33825621f4e9d53",
+                        "web": "1:690187611690:web:0357508ecdde74004e9d53"
+                    }
+                }
+            }
+        }
+    }
+}
