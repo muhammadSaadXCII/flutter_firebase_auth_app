@@ -17,7 +17,7 @@ This project is a complete Flutter app showcasing modern authentication flows in
 
 | Login Screen | SignUp Screen | Profile Screen |
 |---|---|---|
-| ![Login Screen](assets\images\login_screen.png) | ![SignUp Screen](assets\images\signup_screen.png) | ![Profile Screen](assets\images\profile_screen.png) |
+| ![Login Screen](assets/images/login_screen.png) | ![SignUp Screen](assets/images/signup_screen.png) | ![Profile Screen](assets/images/profile_screen.png) |
 
 
 ## Prerequisites
